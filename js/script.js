@@ -30,17 +30,13 @@ function displayResult(argComputerMove,argPlayerMove){
       printMessage('Ty przegrywasz!');
     } else if (argComputerMove == 'kamień' && argPlayerMove == 'kamień'){
       printMessage('Remis!');
-  }
-
-  if(argComputerMove == 'papier' && argPlayerMove == 'papier'){
+    } else if(argComputerMove == 'papier' && argPlayerMove == 'papier'){
       printMessage('Remis!');
     } else if (argComputerMove == 'papier' && argPlayerMove == 'nożyce'){
       printMessage('Ty wygrywasz!');
     } else if (argComputerMove == 'papier' && argPlayerMove == 'kamień'){
       printMessage('Ty przegrywasz!');
-  }
-
-  if(argComputerMove == 'nożyce' && argPlayerMove == 'papier'){
+    } else if(argComputerMove == 'nożyce' && argPlayerMove == 'papier'){
       printMessage('Ty przegrywasz!');
     } else if (argComputerMove == 'nożyce' && argPlayerMove == 'nożyce'){
       printMessage('Remis!');
