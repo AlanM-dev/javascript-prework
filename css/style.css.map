@@ -1,9 +1,1 @@
-{
-	"version": 3,
-	"file": "style.css",
-	"sources": [
-		"../sass/style.scss"
-	],
-	"names": [],
-	"mappings": ""
-}
+{"version":3,"sources":["../sass/style.scss"],"names":[],"mappings":"AAAA,eAAe;AAMf,YAAY;AAEZ;EACI,uBAAsB;CACzB;;AAED;EACI,iBAAgB;EAChB,gBAAe;EACf,eAAc;EACd,mBAAkB;CACrB;;AAED;EACI,qBAAa;EAAb,cAAa;EACb,2BAAsB;MAAtB,uBAAsB;EACtB,0BAA6B;MAA7B,8BAA6B;CAChC;;AAED;EACI,0BAxBgB;EAyBhB,kBAAiB;CACpB;;AAED;EACI,mBAAkB;CACrB;;AAED;EACI,mBAAkB;EAClB,cAAa;CAWhB;;AAbD;EAIQ,mBAAkB;EAClB,YAAW;EACX,cAAa;EACb,UAAS;EACT,aAAY;EACZ,YAAW;EACX,4BAA2B;EAC3B,oBA3CY;CA4CX;;AAGT;EACI,gBAAe;EACf,kBAAiB;CACpB;;AAED;EACI,sBAAqB;EACrB,iBAAgB;CACnB;;AAED;EACI,gBAAe;EACf,wBAAuB;EACvB,aAAY;EACZ,gBAAe;EACf,oBAAmB;CAMtB;;AAXD;EAQQ,gBAAe;EACf,eAlEY;CAmEX","file":"style.css"}

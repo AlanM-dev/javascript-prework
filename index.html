@@ -3,15 +3,30 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Kamień, papier, nożyce</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div class="container">
-		<div id="buttons"></div>
-			<button id="play-rock">KAMIEŃ</button>
-			<button id="play-paper">PAPIER</button>
-			<button id="play-scissors">NOŻYCE</button>
-		<div id="messages"></div>
+		<div class="flex-cont">
+			<div class="game-cont">
+				<h1 class="header-title">GRA W KAMIEŃ, PAPIER, NOŻYCE</h1>
+				<h2 class="welcome-title">Witaj Podróżniku! Zagramy w grę?</h2>
+				<p class="rules">Zasady gry:</p>
+				<ol class="rules-list">
+					<li>Wybierz swój ruch</li>
+					<li>Kliknij ikonę wybranego ruchu</li>
+					<li>Ciesz się smakiem zwycięstwa! <br>.... lub płacz samotnie w kącie :(</li>
+				</ol>
+				<p class="move">Jaki jest Twój ruch?</p>
+				<div class="btn" id="buttons"></div>
+					<button id="play-rock"><i class="far fa-hand-rock"></i><br>KAMIEŃ</button>
+					<button id="play-paper"><i class="far fa-hand-paper"></i><br>PAPIER</button>
+					<button id="play-scissors"><i class="far fa-hand-scissors"></i><br>NOŻYCE</button>
+				<div id="messages"></div>
+				<div id="result"></div>
+			</div>	
+		</div>	
 	</div>
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>

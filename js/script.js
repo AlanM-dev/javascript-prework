@@ -1,5 +1,5 @@
 // PLAY GAME FUNCTION //
-
+{
 function playGame(argPlayerInput){
   clearMessages();
 
@@ -19,8 +19,8 @@ function playGame(argPlayerInput){
       return 'nożyce';
     }
     
-    printMessage('Nie znam ruchu o id ' + argMoveId + '.');
-    return 'nieznany ruch';
+    //printMessage('Nie znam ruchu o id ' + argMoveId + '.');
+    //return 'nieznany ruch';
   }
 
   function displayResult(argComputerMove,argPlayerMove){
@@ -33,22 +33,28 @@ function playGame(argPlayerInput){
 
     if(argComputerMove == 'kamień' && argPlayerMove == 'papier'){
         printMessage('Ty wygrywasz!');
+        playerScore = playerScore + 1;
       } else if (argComputerMove == 'kamień' && argPlayerMove == 'nożyce'){
         printMessage('Ty przegrywasz!');
+        computerScore = computerScore + 1;
       } else if (argComputerMove == 'kamień' && argPlayerMove == 'kamień'){
         printMessage('Remis!');
       } else if(argComputerMove == 'papier' && argPlayerMove == 'papier'){
         printMessage('Remis!');
       } else if (argComputerMove == 'papier' && argPlayerMove == 'nożyce'){
         printMessage('Ty wygrywasz!');
+        playerScore = playerScore + 1;
       } else if (argComputerMove == 'papier' && argPlayerMove == 'kamień'){
         printMessage('Ty przegrywasz!');
+        computerScore = computerScore + 1;
       } else if(argComputerMove == 'nożyce' && argPlayerMove == 'papier'){
         printMessage('Ty przegrywasz!');
+        computerScore = computerScore + 1;
       } else if (argComputerMove == 'nożyce' && argPlayerMove == 'nożyce'){
         printMessage('Remis!');
       } else if (argComputerMove == 'nożyce' && argPlayerMove == 'kamień'){
         printMessage('Ty wygrywasz!');
+        playerScore = playerScore + 1;
     }
   }
 
@@ -64,19 +70,54 @@ function playGame(argPlayerInput){
 
   // COMPUTER MOVE //
 
+  //uczciwa gra // 
+
   let randomNumber = Math.floor(Math.random() * 3 + 1);
 
   console.log('Wylosowana liczba to: ' + randomNumber);
 
   let computerMove = getMoveName(randomNumber);
+  //let computerMove = '';
 
   printMessage('Mój ruch to: ' + computerMove);
 
+  // 75% WinRate //
+  /*
+  let procentNumber = Math.floor(Math.random() * 100 + 1);
+
+  if (procentNumber > 75){
+    let randomNumber = Math.floor(Math.random() * 3 + 1); 
+    computerMove = getMoveName(randomNumber);
+
+  } else {
+    if (playerMove == 'kamień') {
+      computerMove = 'nożyce';
+    } else if (playerMove == 'nożyce') {
+      computerMove = 'papier';
+    } else {
+      computerMove = 'kamień';
+    }
+  }
+*/
+
+
   // RESULT //
 
-  let gameResult = displayResult(computerMove,playerMove);
+  displayResult(computerMove,playerMove);
+  
+  console.log(playerScore,computerScore);
+
+  document.querySelector('#result').innerHTML = 'Gracz: ' + playerScore + ' - ' + computerScore + ' :Komputer';
+
 
 }
+
+let computerScore = 0
+let playerScore = 0
+
+// guzik reset//
+
+
 
 // LISTENERS //
 
@@ -92,4 +133,5 @@ document.getElementById('play-scissors').addEventListener('click', function() {
   playGame(3);
   //printMessage('guzik 3 kliknięty');
 });
+}
 
