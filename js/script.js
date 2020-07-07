@@ -109,14 +109,22 @@ function playGame(argPlayerInput){
 
   document.querySelector('#result').innerHTML = 'Gracz: ' + playerScore + ' - ' + computerScore + ' :Komputer';
 
-
+  // guzik reset //
+  
+  function resetButton(argGameScore) {
+    clearMessages();
+    computerScore = argGameScore;
+    playerScore = argGameScore;
+  }
+  
+  document.getElementById('reset').addEventListener('click', function() {
+    resetButton(0);
+  }); 
+  
 }
 
 let computerScore = 0
 let playerScore = 0
-
-// guzik reset//
-
 
 
 // LISTENERS //
