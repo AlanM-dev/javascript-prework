@@ -115,6 +115,7 @@ function playGame(argPlayerInput){
     clearMessages();
     computerScore = argGameScore;
     playerScore = argGameScore;
+    document.querySelector('#result').innerHTML = '';
   }
   
   document.getElementById('reset').addEventListener('click', function() {
