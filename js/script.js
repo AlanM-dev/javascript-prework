@@ -3,7 +3,7 @@
 const playGame = function(argPlayerInput){
   clearMessages();
 
-  let playerInput = argPlayerInput;
+  const playerInput = argPlayerInput;
   
   // FUNCTIONS //
 
@@ -63,7 +63,7 @@ const playGame = function(argPlayerInput){
 */
   console.log('Gracz wpisał: ' + playerInput);
 
-  let playerMove = getMoveName(playerInput);
+  const playerMove = getMoveName(playerInput);
 
   printMessage('Twój ruch to: ' + playerMove);
 
@@ -71,11 +71,11 @@ const playGame = function(argPlayerInput){
 
   //uczciwa gra // 
 
-  let randomNumber = Math.floor(Math.random() * 3 + 1);
+  const randomNumber = Math.floor(Math.random() * 3 + 1);
 
   console.log('Wylosowana liczba to: ' + randomNumber);
 
-  let computerMove = getMoveName(randomNumber);
+  const computerMove = getMoveName(randomNumber);
   //let computerMove = '';
 
   printMessage('Mój ruch to: ' + computerMove);
