@@ -1,13 +1,13 @@
 // PLAY GAME FUNCTION //
 {
-function playGame(argPlayerInput){
+const playGame = function(argPlayerInput){
   clearMessages();
 
   let playerInput = argPlayerInput;
   
   // FUNCTIONS //
 
-  function getMoveName(argMoveId){
+  const getMoveName = function(argMoveId){
 
     console.log('RUCH:', argMoveId);
 
@@ -22,8 +22,7 @@ function playGame(argPlayerInput){
     //printMessage('Nie znam ruchu o id ' + argMoveId + '.');
     //return 'nieznany ruch';
   }
-
-  function displayResult(argComputerMove,argPlayerMove){
+  const displayResult = function(argComputerMove,argPlayerMove){
     
     console.log('WYBRANE RUCHY:', argComputerMove, argPlayerMove);
 
@@ -110,8 +109,7 @@ function playGame(argPlayerInput){
   document.querySelector('#result').innerHTML = 'Gracz: ' + playerScore + ' - ' + computerScore + ' :Komputer';
 
   // guzik reset //
-  
-  function resetButton(argGameScore) {
+  const resetButton = function(argGameScore){
     clearMessages();
     computerScore = argGameScore;
     playerScore = argGameScore;
@@ -142,5 +140,6 @@ document.getElementById('play-scissors').addEventListener('click', function() {
   playGame(3);
   //printMessage('guzik 3 kliknięty');
 });
+
 }
 
