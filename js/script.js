@@ -19,8 +19,6 @@ const playGame = function(argPlayerInput){
       return 'nożyce';
     }
     
-    //printMessage('Nie znam ruchu o id ' + argMoveId + '.');
-    //return 'nieznany ruch';
   }
   const displayResult = function(argComputerMove,argPlayerMove){
     
@@ -58,9 +56,7 @@ const playGame = function(argPlayerInput){
   }
 
   // PLAYER MOVE //
-/*
-  let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
-*/
+
   console.log('Gracz wpisał: ' + playerInput);
 
   const playerMove = getMoveName(playerInput);
@@ -76,7 +72,6 @@ const playGame = function(argPlayerInput){
   console.log('Wylosowana liczba to: ' + randomNumber);
 
   const computerMove = getMoveName(randomNumber);
-  //let computerMove = '';
 
   printMessage('Mój ruch to: ' + computerMove);
 
@@ -130,15 +125,12 @@ let playerScore = 0
 
 document.getElementById('play-rock').addEventListener('click', function() {
   playGame(1);
-  //printMessage('guzik 1 kliknięty');
 });
 document.getElementById('play-paper').addEventListener('click', function() {
   playGame(2);
-  //printMessage('guzik 2 kliknięty');
 });
 document.getElementById('play-scissors').addEventListener('click', function() {
   playGame(3);
-  //printMessage('guzik 3 kliknięty');
 });
 
 }
